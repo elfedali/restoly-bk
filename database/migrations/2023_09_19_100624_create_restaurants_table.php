@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('city_id')->constrained();
             $table->foreignId('street_id')->nullable()->constrained();
             $table->string('address')->nullable();
-            $table->foreignId('approved_by')->nullable()->constrained('users', 'by');
+            $table->foreignId('approved_by')->nullable()->constrained('users', 'id');
             $table->string('name');
             $table->string('slug');
             $table->string('email')->nullable();

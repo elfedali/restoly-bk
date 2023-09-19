@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('table_id')->constrained();
             $table->foreignId('client_id')->constrained('users');
-            $table->foreignId('approved_by')->nullable()->constrained('users', 'by');
+            $table->foreignId('approved_by')->nullable()->constrained('users');
             $table->dateTime('arrival_date');
             $table->dateTime('departure_date')->nullable();
-            $table->enum('status', ["pending","accepted","rejected"]);
+            $table->enum('status', ["pending", "accepted", "rejected"]);
             $table->text('note')->nullable();
             $table->unsignedBigInteger('reservationable_id');
             $table->string('reservationable_type');

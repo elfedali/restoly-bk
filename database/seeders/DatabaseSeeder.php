@@ -27,5 +27,8 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
         ]);
+
+        // call CountrySeeder
+        $this->call(CountrySeeder::class);
     }
 }
